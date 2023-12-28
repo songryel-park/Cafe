@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class CustomExceptionHandler {
     @ExceptionHandler(BaseException::class)
-    protected fun handleBaseException(e: BaseException): ResponseEntity<ErrorResponse> {
+    protected fun baseException(e: BaseException): ResponseEntity<ErrorResponse> {
         return ResponseEntity.status(e.code.status)
             .body(ErrorResponse(e.code, e.message))
     }
