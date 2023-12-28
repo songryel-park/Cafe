@@ -7,11 +7,11 @@ import com.teamsparta.cafe.exception.DuplicateException
 import com.teamsparta.cafe.repository.UserRepository
 import com.teamsparta.cafe.security.JwtTokenProvider
 import com.teamsparta.cafe.security.TokenInfo
-import jakarta.transaction.Transactional
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder
 import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.stereotype.Service
+import org.springframework.transaction.annotation.Transactional
 
 @Transactional
 @Service
